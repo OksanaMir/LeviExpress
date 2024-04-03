@@ -15,7 +15,6 @@ export const HomePage = () => {
 	const handleJourneyChange = data => {
 		setJourney(data);
 		setUserSeat(data.autoSeat);
-		console.log(data);
 	};
 
 	const postReservation = async (
@@ -39,7 +38,6 @@ export const HomePage = () => {
 		// let id;
 
 		postReservation().then(data => {
-			console.log(data);
 			let id = data.results.reservationId;
 			navigate(`/reservation/${id}`);
 		});

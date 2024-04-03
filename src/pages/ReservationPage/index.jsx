@@ -9,7 +9,6 @@ export const ReservationPage = () => {
 		const fetchReservation = async () => {
 			const response = await fetch(
 				`https://apps.kodim.cz/daweb/leviexpress/api/reservation?id=${id}`
-				//https://apps.kodim.cz/daweb/leviexpress/api/reservation?id=HAQBAQASf7M
 			);
 			const data = await response.json();
 			setReservation(data.results);
@@ -17,7 +16,6 @@ export const ReservationPage = () => {
 		fetchReservation();
 	}, []);
 
-	id ? console.log(id) : console.log('Loading');
 	return reservation ? (
 		<main>
 			<div className="reservation container">
@@ -45,6 +43,6 @@ export const ReservationPage = () => {
 			</div>
 		</main>
 	) : (
-		'Loadong...'
+		'Loading...'
 	);
 };
