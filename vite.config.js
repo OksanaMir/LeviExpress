@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
 	root: './src',
-	publicDir: './public',
+	publicDir: '../public',
 	server: {
 		hmr: false
 	},
 	build: {
-		outDir: './dist',
+		outDir: '../dist',
 		modulePreload: false
 	},
 	plugins: [react()],

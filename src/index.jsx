@@ -6,24 +6,27 @@ import { HomePage } from './pages/HomePage';
 import { ReservationPage } from './pages/ReservationPage';
 import './global.css';
 
-const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <App />,
-		children: [
-			{
-				path: '/',
-				element: <HomePage />
-				// errorElement: <ErrorPage />
-			},
-			{
-				path: '/reservation/:id',
-				element: <ReservationPage />
-				// children: [{ path: ':id', element: <ReservationPage /> }]
-			}
-		]
-	}
-]);
+const router = createBrowserRouter(
+	[
+		{
+			path: '/',
+			element: <App />,
+			children: [
+				{
+					path: '/',
+					element: <HomePage />
+					// errorElement: <ErrorPage />
+				},
+				{
+					path: '/reservation/:id',
+					element: <ReservationPage />
+					// children: [{ path: ':id', element: <ReservationPage /> }]
+				}
+			]
+		}
+	],
+	{ basename: '/LeviExpress' }
+);
 
 createRoot(document.querySelector('#app')).render(
 	<RouterProvider router={router} />

@@ -2,11 +2,11 @@
 	"name": "leviexpress",
 	"version": "1.0.0",
 	"description": "Starter for the LeviExpress training project",
-	"homepage": "https://oksanamir.github.io/LeviExpress/",
 	"type": "module",
+	"homepage": ".",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "vite build --emptyOutDir",
 		"preview": "vite preview",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist"
