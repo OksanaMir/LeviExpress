@@ -1,7 +1,6 @@
 import BusStop from '../BusStop';
 import './style.css';
 export const JourneyDetail = ({ detail }) => {
-	console.log(detail);
 	return (
 		// detail && (
 		<div className="journey-detail container">
