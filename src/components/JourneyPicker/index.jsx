@@ -155,7 +155,10 @@ export const JourneyPicker = ({ onJourneyChange }) => {
 						}
 					/>
 				</form>
-				<img className="journey-picker__map" src="./img/map.svg" />
+				<img
+					className="journey-picker__map"
+					src={process.env.PUBLIC_URL + '/map.svg'}
+				/>
 			</div>
 		</div>
 	);
