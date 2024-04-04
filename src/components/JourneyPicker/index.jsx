@@ -148,11 +148,14 @@ export const JourneyPicker = ({ onJourneyChange }) => {
 						text="Vyhledat spoj"
 						type="submit"
 						disabled={
-							date === '' || toCity === '' || fromCity === ''
+							date === '' ||
+							toCity === '' ||
+							fromCity === '' ||
+							toCity === fromCity
 						}
 					/>
 				</form>
-				<img className="journey-picker__map" src="/map.svg" />
+				<img className="journey-picker__map" src="./img/map.svg" />
 			</div>
 		</div>
 	);
